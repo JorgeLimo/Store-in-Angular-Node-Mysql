@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../src/assets/vendor/fontawesome-free/css/all.min.css";
+@import "../src/assets/css/sb-admin-2.min.css";
+
+
+app-root{
+    display: flex;
+    width: 100%;
+}

@@ -1,0 +1,8 @@
+<app-header *ngIf="isLogin"></app-header>
+<div id="content-wrapper" class="d-flex flex-column elementDataNew">
+    <div id="content">
+        <app-navbar  *ngIf="isLogin"></app-navbar>
+        <app-login></app-login>
+    </div>
+    <app-footer></app-footer>
+</div>

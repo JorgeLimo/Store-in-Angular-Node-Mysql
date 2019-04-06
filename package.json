@@ -1,0 +1,34 @@
+{
+  "name": "Store-in-Angular-Node-Mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JorgeLimo/Store-in-Angular-Node-Mysql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.0",
+    "mongoose": "^5.4.18",
+    "mysql": "^2.16.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10",
+    "morgan": "^1.9.1"
+  },
+  "bugs": {
+    "url": "https://github.com/JorgeLimo/Store-in-Angular-Node-Mysql/issues"
+  },
+  "homepage": "https://github.com/JorgeLimo/Store-in-Angular-Node-Mysql#readme"
+}
