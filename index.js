@@ -7,6 +7,9 @@ const globals = require('./src/config/globals'); // CONSTANTES DEL SISTEMA
 //Init expressJS
 const app = express();
 
+//Get routes files
+const usuariosRoutes = require('./src/routes/usuarios');
+
 //Settings
 app.set('port', process.env.PORT || 3000);
 
@@ -17,6 +20,9 @@ app.use(express.urlencoded({extended : false}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(morgan("combined"));
+
+///AGREGAR RUTAS AL EXPRESS
+app.use('/api/usuarios', usuariosRoutes);    
 
 //Start Server
 app.listen(app.get('port'),() => {

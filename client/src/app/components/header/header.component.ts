@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public tituloNav:String;
+
+  constructor() {
+    this.tituloNav = "BackOffices";
+  }
 
   ngOnInit() {
   }
