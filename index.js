@@ -21,6 +21,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(morgan("combined"));
 
+//Passport
+require('./src/config/passport')(passport);
+
+
 ///AGREGAR RUTAS AL EXPRESS
 app.use('/api/usuarios', usuariosRoutes);    
 
