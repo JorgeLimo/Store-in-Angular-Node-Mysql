@@ -1,0 +1,16 @@
+<div class="modal-header">
+  <h5 class="modal-title">Ejemplo data...</h5>
+</div>
+<div class="modal-body">
+    <input type="text" [(ngModel)]="valor" class="form-control" name="valor">
+    <br>
+    <input type="text" [(ngModel)]="valor2" class="form-control" name="valor2">
+    <br>
+    <input type="text" [(ngModel)]="valor3" class="form-control" name="valor3">
+    <br>
+    <input type="text" [(ngModel)]="valor4" class="form-control" name="valor4">
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary" (click)="enviarValores()">Actualizar</button>
+  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service'; 
 
 declare var $:any;
 
@@ -11,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   public tituloNav:String;
 
-  constructor() {
+  constructor(private authServ:AuthService) {
     this.tituloNav = "BackOffices";
   }
 

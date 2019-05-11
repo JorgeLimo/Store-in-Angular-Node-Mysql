@@ -15,10 +15,17 @@ import { LoginComponent } from './components/login/login.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { NoEncontradoComponent } from './components/no-encontrado/no-encontrado.component';
 
+import { AuthGuard } from './guards/auth.guard';
+import { LoginGuard } from './guards/login.guard';
+
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ModalEjemploComponent } from './components/inicio/modal-ejemplo/modal-ejemplo.component';
+
+
 const routes: Routes = [
-  {path: '', component: InicioComponent},
-  {path: 'iniciar-sesion', component: LoginComponent},
-  {path: 'usuarios', component: UsuariosComponent},
+  {path: '', component: InicioComponent, canActivate:[AuthGuard]},
+  {path: 'iniciar-sesion', component: LoginComponent, canActivate:[LoginGuard]},
+  {path: 'usuarios', component: UsuariosComponent, canActivate:[AuthGuard]},
   {path: '**', component: NoEncontradoComponent}
 ];
 
@@ -31,15 +38,18 @@ const routes: Routes = [
     NavbarComponent,
     LoginComponent,
     UsuariosComponent,
-    NoEncontradoComponent
+    NoEncontradoComponent,
+    ModalEjemploComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
     FormsModule,
+    ModalModule.forRoot()
   ],
-  providers: [],
+  providers: [AuthGuard, LoginGuard],
+  entryComponents : [ModalEjemploComponent],
   bootstrap: [AppComponent]
 })
 

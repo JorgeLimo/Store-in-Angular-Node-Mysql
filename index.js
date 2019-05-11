@@ -17,6 +17,7 @@ app.set('port', process.env.PORT || 3000);
 app.use(cors());
 app.use(express.json()); // para que el servidor reciba los JSON en una peticion
 app.use(express.urlencoded({extended : false}));
+// requisito para que funcione
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(morgan("combined"));
@@ -27,6 +28,8 @@ require('./src/config/passport')(passport);
 
 ///AGREGAR RUTAS AL EXPRESS
 app.use('/api/usuarios', usuariosRoutes);    
+
+
 
 //Start Server
 app.listen(app.get('port'),() => {
